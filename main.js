@@ -4,7 +4,7 @@ const app = Vue.createApp({
             product: 'Socks',
             image: './assets/images/socks_blue.jpg',
             inventory: 0,
-            onSale: true
+            onSale: false
         }
     }
 })
