@@ -42,9 +42,9 @@ app.component('product-display', {
 
         <button
           class="button"
-          v-on:click="removeCart"
-
-          >
+          :class="{ disabledButton: !inStock }" 
+          :disabled="!inStock" 
+          v-on:click="removeCart">
           Remove
         </button>
       </div>
