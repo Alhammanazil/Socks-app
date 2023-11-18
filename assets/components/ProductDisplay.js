@@ -22,10 +22,8 @@ app.component('product-display', {
         <p v-if="inStock">In Stock</p>
         <p v-else>Out of Stock</p>
         <p>Shipping: {{ shipping }}</p>
-        <p>Details: {{ ProductDetails }}<p>
-        <ul>
-          <li v-for="detail in details">{{ detail }}</li>
-        </ul>
+        <product-details :details="details"></product-details>
+        <!-- solution -->
 
         <div 
           v-for="(variant, index) in variants" 
@@ -75,9 +73,6 @@ computed: {
             return 'Free'
         }
         return 2.99
-    },
-    ProductDetails() {
-        return this.details[this.selectedVariant]
     }
 }
 })

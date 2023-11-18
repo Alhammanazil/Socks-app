@@ -2,8 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             cart: 0,
-            premium: true,
-            details: ["soft, elastic, fit"]
+            premium: true
         }
     },
     methods: {}
